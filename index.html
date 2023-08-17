@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="open-modal l but lrg w3-button w3-green w3-margin">Open Image Cropper</a>
+<div class="w3-modal cropper">
+   <div class="w3-modal-content">
+    <span class="w3-button w3-black w3-hover-red w3-display-topright w3-theme close-modal">&times;</span>
+     <h2 class="w3-black w3-center w3-padding"><strong>Image Cropper</strong></h2>
+     <div class="w3-container w3-white">
+        <p>Press the button below to upload and crop an image.</p>
+        <div id="ic-main" class="ibox">
+            <div class="ic-btns clearfix">
+                <div id="ic-upload-btn" class="l but lrg file-button w3-button w3-blue">
+                    <span id="ic-upload-btn-label" style="font-family: inherit;font-size: inherit;">Upload Image</span>
+                    <input class="file-input" type="file" />
+                </div>
+            </div>
+            <div id="ic-cropper-wrap"></div>
+            <div class="ic-hidden ic-crop-btn-wrap"><br />
+                <div id="ic-rotate-btn" class="l but lrg w3-button w3-grey">
+                    <svg x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                        <path d="M41.038,24.1l-7.152,9.342L26.734,24.1H31.4c-0.452-4.397-4.179-7.842-8.696-7.842c-4.82,0-8.742,3.922-8.742,8.742 s3.922,8.742,8.742,8.742c1.381,0,2.5,1.119,2.5,2.5s-1.119,2.5-2.5,2.5c-7.576,0-13.742-6.165-13.742-13.742 s6.166-13.742,13.742-13.742c7.274,0,13.23,5.686,13.697,12.842H41.038z" />
+                    </svg>
+                    Rotate
+                </div>
+                <div id="ic-flip-btn" class="l but lrg w3-button w3-grey">Flip</div> <a id="ic-crop-btn" class="l but lrg w3-button w3-grey">Crop</a>
+            </div>
+            <div id="ic-result-wrap" class="ic-hidden ic-result-wrap" style="margin-top: 20px;">
+                <div class="result-container" style="position: relative;width: fit-content;block-size: fit-content;padding: 0px;z-index: 1;"><div class="theresult" style="position: relative;width: fit-content;block-size: block;padding: 0px;margin: 0px;"></div></div>
+            </div>
+            <div id="ic-download-wrap" class="ic-hidden ic-download-wrap">
+                <div class="select">
+                    <select class="w3-select" id="ic-download-type" style="width: 100px; display:inline-block;">
+                        <option value="image/jpeg">jpeg</option>
+                        <option value="image/png">png</option>
+                    </select> <a id="ic-download-btn" class="l but lrg w3-button w3-grey">Download</a>
+                </div>
+                <hr />
+                Size: <span id="ic-info"></span>
+            </div>
+        </div>
+      <br /><br />
+   </div>
+   </div>
+  </div>
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://jasonlau.biz/cropper-dev/jquery-1.12.4.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+</html>
